@@ -1,17 +1,44 @@
+///// MOBILE STYLE MIXINS //////
+
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
 @function space($multiplier) {
 	@return $base-spacing-unit * $multiplier;
 }
 
 @mixin title-text{
 	font-family: helvetica;
-	font-size: 24px;
-	line-height: 33px;
+	font-size: 28px;
+	line-height: 36px;
 	font-style: italic;
 	text-transform: uppercase;
+	@include for-phone-only {
+		font-size: 24px;
+		line-height: 33px;
+	}
 }
 
 @mixin body-text {
 	font-family: helvetica;
-	font-size: 24px;
-	line-height: 29px;
+	font-size: 28px;
+	line-height: 33px;
+	@include for-phone-only {
+		font-size: 24px;
+		line-height: 28px;
+	}
 }

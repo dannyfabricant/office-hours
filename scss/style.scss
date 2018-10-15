@@ -13,6 +13,9 @@ body {
 	display: flex;
 	flex-flow: column;
 	height: 100vh;
+	@include for-phone-only {
+		height: auto;
+	}
 }
 a {
 	color: #000;
@@ -27,6 +30,9 @@ a {
 	overflow: hidden;
 	padding: space(1);
 	white-space: nowrap;
+	@include for-phone-only {
+		padding: 10px;
+	}
 }
 .half {
 	width: 50%;
@@ -36,6 +42,12 @@ a {
 	box-sizing: border-box;
 	vertical-align: top;
 	overflow: hidden;
+	@include for-phone-only {
+		display: block;
+		width: 100%;
+		min-width: 0px;
+		padding: 10px;
+	}
 }
 
 
@@ -43,6 +55,9 @@ a {
 
 header {
 	margin-bottom: space(2);
+	@include for-phone-only {
+		margin-bottom: 10px;
+	}
 }
 #title, #location, #insta, #radio, #current, #nav, #period {
 	@include title-text; 
@@ -54,6 +69,19 @@ header {
 		color: $red;
 	}
 }
+@include for-phone-only {
+	#radio {
+		display: flex;
+		flex-flow: row;
+		#controls {
+			flex: 2;
+		}
+		#current{
+			flex: 3;
+			text-align: right;
+		}
+	}
+}
 
 #main-content {
 	flex: 2;
@@ -61,6 +89,9 @@ header {
 	#nav {
 		padding-top: 60px;
 		padding-left: space(1);
+		@include for-phone-only {
+			padding-top: 20px;
+		}
 		.nav-item-wrap {
 			margin-bottom: 5px;
 			padding-bottom: 3px;
@@ -83,6 +114,12 @@ header {
 		width: Calc(50% + 15px);
 		padding: 0px;
 		overflow-y: scroll; 
+		@include for-phone-only {
+			height: auto;
+			width: 100%;
+			padding: space(1);
+			padding-top: 10px;
+		}
 		.scroll {
 			display: none;
 			width: Calc(100% - 35px);
@@ -90,6 +127,10 @@ header {
 			padding-top: space(3);
 			padding-bottom: space(2);
 			overflow: hidden;
+			@include for-phone-only {
+				padding-top: 0px;
+				width: 100%;
+			}
 		}
 		.scroll.show {
 			display: block;
@@ -125,11 +166,6 @@ header {
 		padding-top: 0px;
 	}
 }
-
-
-
-
-
 
 
 
