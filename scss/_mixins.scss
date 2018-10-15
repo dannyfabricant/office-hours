@@ -1,0 +1,17 @@
+@function space($multiplier) {
+	@return $base-spacing-unit * $multiplier;
+}
+
+@mixin title-text{
+	font-family: helvetica;
+	font-size: 24px;
+	line-height: 33px;
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+@mixin body-text {
+	font-family: helvetica;
+	font-size: 24px;
+	line-height: 29px;
+}
