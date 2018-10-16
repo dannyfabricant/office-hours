@@ -6,14 +6,14 @@ $base-spacing-unit: 20px;
 @import '_mixins.scss';
 
 html {
-	font-family: helvetica;
 	background-color: rgb(231,253,0);
+	@include body-text;
 }
 body {
 	display: flex;
 	flex-flow: column;
 	height: 100vh;
-	@include for-phone-only {
+	@include small-screen {
 		height: auto;
 	}
 }
@@ -30,20 +30,20 @@ a {
 	overflow: hidden;
 	padding: space(1);
 	white-space: nowrap;
-	@include for-phone-only {
+	@include small-screen {
 		padding: 10px;
+		white-space: normal;
 	}
 }
 .half {
 	width: 50%;
-	min-width: 300px;
 	position: relative;
 	display: inline-block;
 	box-sizing: border-box;
 	vertical-align: top;
 	overflow: hidden;
-	@include for-phone-only {
-		display: block;
+	@include small-screen {
+		// display: block;	
 		width: 100%;
 		min-width: 0px;
 		padding: 10px;
@@ -55,10 +55,16 @@ a {
 
 header {
 	margin-bottom: space(2);
-	@include for-phone-only {
+	@include small-screen {
 		margin-bottom: 10px;
 	}
+	#insta {
+		span {
+			float: left;
+		}
+	}
 }
+
 #title, #location, #insta, #radio, #current, #nav, #period {
 	@include title-text; 
 }
@@ -67,9 +73,13 @@ header {
 	background-color: #fff;
 	#controls {
 		color: $red;
+		line-height: 1;
+	}
+	#current {
+		line-height: 1;
 	}
 }
-@include for-phone-only {
+@include small-screen {
 	#radio {
 		display: flex;
 		flex-flow: row;
@@ -84,13 +94,20 @@ header {
 }
 
 #main-content {
+	position: relative;
 	flex: 2;
 	padding: 0px;
 	#nav {
-		padding-top: 60px;
-		padding-left: space(1);
-		@include for-phone-only {
+		position: absolute;
+		top: 60px;
+		left: 20px;
+		z-index: 2;
+		@include small-screen {
+			position: relative;
+			top: 0;
+			left: 0;
 			padding-top: 20px;
+			padding-left: 20px;
 		}
 		.nav-item-wrap {
 			margin-bottom: 5px;
@@ -111,12 +128,12 @@ header {
 	}
 	#content {
 		height: 100%;
-		width: Calc(50% + 15px);
+		width: Calc(100% + 15px);
 		padding: 0px;
 		overflow-y: scroll; 
-		@include for-phone-only {
+		@include small-screen {
 			height: auto;
-			width: 100%;
+			width: Calc(100% + 15px);
 			padding: space(1);
 			padding-top: 10px;
 		}
@@ -127,9 +144,17 @@ header {
 			padding-top: space(3);
 			padding-bottom: space(2);
 			overflow: hidden;
-			@include for-phone-only {
+			@include small-screen {
 				padding-top: 0px;
 				width: 100%;
+			}
+			.scroll-inner {
+				margin-left: Calc(50% + 20px);
+				width: calc(50% - 35px);
+				@include small-screen {
+					margin-left: 0px;
+					width: 100%;
+				}
 			}
 		}
 		.scroll.show {

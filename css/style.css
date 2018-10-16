@@ -54,10 +54,31 @@ table {
   border-spacing: 0;
 }
 
+@font-face {
+  font-family: 'HelveticaNeueLTPro-Roman';
+  src: url("../fonts/HelveticaNeueLTPro-Roman.woff2") format("woff2"), url("../fonts/HelveticaNeueLTPro-Roman.woff") format("woff"), url("../fonts/HelveticaNeueLTPro-Roman.ttf") format("truetype"), url("../fonts/HelveticaNeueLTPro-Roman.svg#HelveticaNeueLTPro-Roman") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeueLTPro-It';
+  src: url("../fonts/HelveticaNeueLTPro-It.woff2") format("woff2"), url("../fonts/HelveticaNeueLTPro-It.woff") format("woff"), url("../fonts/HelveticaNeueLTPro-It.ttf") format("truetype"), url("../fonts/HelveticaNeueLTPro-It.svg#HelveticaNeueLTPro-It") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 /* line 8, ../scss/style.scss */
 html {
-  font-family: helvetica;
   background-color: #e7fd00;
+  font-family: 'HelveticaNeueLTPro-Roman';
+  font-size: 34px;
+  line-height: 1.2;
+  font-size: 26px;
+}
+@media (min-width: 900px) {
+  /* line 8, ../scss/style.scss */
+  html {
+    font-size: 34px;
+  }
 }
 
 /* line 12, ../scss/style.scss */
@@ -66,7 +87,7 @@ body {
   flex-flow: column;
   height: 100vh;
 }
-@media (max-width: 599px) {
+@media (max-width: 800px) {
   /* line 12, ../scss/style.scss */
   body {
     height: auto;
@@ -89,27 +110,26 @@ a {
   padding: 20px;
   white-space: nowrap;
 }
-@media (max-width: 599px) {
+@media (max-width: 800px) {
   /* line 25, ../scss/style.scss */
   .full {
     padding: 10px;
+    white-space: normal;
   }
 }
 
-/* line 37, ../scss/style.scss */
+/* line 38, ../scss/style.scss */
 .half {
   width: 50%;
-  min-width: 300px;
   position: relative;
   display: inline-block;
   box-sizing: border-box;
   vertical-align: top;
   overflow: hidden;
 }
-@media (max-width: 599px) {
-  /* line 37, ../scss/style.scss */
+@media (max-width: 800px) {
+  /* line 38, ../scss/style.scss */
   .half {
-    display: block;
     width: 100%;
     min-width: 0px;
     padding: 10px;
@@ -120,105 +140,120 @@ a {
 header {
   margin-bottom: 40px;
 }
-@media (max-width: 599px) {
+@media (max-width: 800px) {
   /* line 56, ../scss/style.scss */
   header {
     margin-bottom: 10px;
   }
 }
-
 /* line 62, ../scss/style.scss */
+header #insta span {
+  float: left;
+}
+
+/* line 68, ../scss/style.scss */
 #title, #location, #insta, #radio, #current, #nav, #period {
-  font-family: helvetica;
-  font-size: 28px;
-  line-height: 36px;
+  font-family: 'HelveticaNeueLTPro-It';
   font-style: italic;
   text-transform: uppercase;
+  line-height: 1.2;
+  font-size: 26px;
 }
-@media (max-width: 599px) {
-  /* line 62, ../scss/style.scss */
+@media (min-width: 900px) {
+  /* line 68, ../scss/style.scss */
   #title, #location, #insta, #radio, #current, #nav, #period {
-    font-size: 24px;
-    line-height: 33px;
+    font-size: 34px;
   }
 }
 
-/* line 66, ../scss/style.scss */
+/* line 72, ../scss/style.scss */
 #radio {
   background-color: #fff;
 }
-/* line 68, ../scss/style.scss */
+/* line 74, ../scss/style.scss */
 #radio #controls {
   color: #e70000;
+  line-height: 1;
+}
+/* line 78, ../scss/style.scss */
+#radio #current {
+  line-height: 1;
 }
 
-@media (max-width: 599px) {
-  /* line 73, ../scss/style.scss */
+@media (max-width: 800px) {
+  /* line 83, ../scss/style.scss */
   #radio {
     display: flex;
     flex-flow: row;
   }
-  /* line 76, ../scss/style.scss */
+  /* line 86, ../scss/style.scss */
   #radio #controls {
     flex: 2;
   }
-  /* line 79, ../scss/style.scss */
+  /* line 89, ../scss/style.scss */
   #radio #current {
     flex: 3;
     text-align: right;
   }
 }
-/* line 86, ../scss/style.scss */
+/* line 96, ../scss/style.scss */
 #main-content {
+  position: relative;
   flex: 2;
   padding: 0px;
 }
-/* line 89, ../scss/style.scss */
+/* line 100, ../scss/style.scss */
 #main-content #nav {
-  padding-top: 60px;
-  padding-left: 20px;
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  z-index: 2;
 }
-@media (max-width: 599px) {
-  /* line 89, ../scss/style.scss */
+@media (max-width: 800px) {
+  /* line 100, ../scss/style.scss */
   #main-content #nav {
+    position: relative;
+    top: 0;
+    left: 0;
     padding-top: 20px;
+    padding-left: 20px;
   }
 }
-/* line 95, ../scss/style.scss */
+/* line 112, ../scss/style.scss */
 #main-content #nav .nav-item-wrap {
   margin-bottom: 5px;
   padding-bottom: 3px;
 }
-/* line 98, ../scss/style.scss */
+/* line 115, ../scss/style.scss */
 #main-content #nav .nav-item-wrap .nav-item {
   display: inline-block;
   cursor: pointer;
 }
-/* line 101, ../scss/style.scss */
+/* line 118, ../scss/style.scss */
 #main-content #nav .nav-item-wrap .nav-item span {
   border-bottom: 2px solid none;
 }
-/* line 106, ../scss/style.scss */
+/* line 123, ../scss/style.scss */
 #main-content #nav .nav-item-wrap .nav-item.selected span {
   border-bottom: 2px solid #000;
 }
-/* line 112, ../scss/style.scss */
+/* line 129, ../scss/style.scss */
 #main-content #content {
   height: 100%;
-  width: Calc(50% + 15px);
+  width: Calc(100% + 15px);
   padding: 0px;
   overflow-y: scroll;
 }
-@media (max-width: 599px) {
-  /* line 112, ../scss/style.scss */
+@media (max-width: 800px) {
+  /* line 129, ../scss/style.scss */
   #main-content #content {
     height: auto;
-    width: 100%;
+    width: Calc(100% + 15px);
     padding: 20px;
     padding-top: 10px;
   }
 }
-/* line 123, ../scss/style.scss */
+/* line 140, ../scss/style.scss */
 #main-content #content .scroll {
   display: none;
   width: Calc(100% - 35px);
@@ -227,36 +262,48 @@ header {
   padding-bottom: 40px;
   overflow: hidden;
 }
-@media (max-width: 599px) {
-  /* line 123, ../scss/style.scss */
+@media (max-width: 800px) {
+  /* line 140, ../scss/style.scss */
   #main-content #content .scroll {
     padding-top: 0px;
     width: 100%;
   }
 }
-/* line 135, ../scss/style.scss */
+/* line 151, ../scss/style.scss */
+#main-content #content .scroll .scroll-inner {
+  margin-left: Calc(50% + 20px);
+  width: calc(50% - 35px);
+}
+@media (max-width: 800px) {
+  /* line 151, ../scss/style.scss */
+  #main-content #content .scroll .scroll-inner {
+    margin-left: 0px;
+    width: 100%;
+  }
+}
+/* line 160, ../scss/style.scss */
 #main-content #content .scroll.show {
   display: block;
 }
 
-/* line 142, ../scss/style.scss */
+/* line 167, ../scss/style.scss */
 #about p {
   width: 100%;
   margin-bottom: 24px;
   white-space: normal;
-  font-family: helvetica;
-  font-size: 28px;
-  line-height: 33px;
+  font-family: 'HelveticaNeueLTPro-Roman';
+  font-size: 34px;
+  line-height: 1.2;
+  font-size: 26px;
 }
-@media (max-width: 599px) {
-  /* line 142, ../scss/style.scss */
+@media (min-width: 900px) {
+  /* line 167, ../scss/style.scss */
   #about p {
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 34px;
   }
 }
 
-/* line 151, ../scss/style.scss */
+/* line 176, ../scss/style.scss */
 #program .block {
   position: relative;
   display: block;
@@ -264,36 +311,35 @@ header {
   padding: 5px 0;
   border-bottom: 2px solid #000;
 }
-/* line 157, ../scss/style.scss */
+/* line 182, ../scss/style.scss */
 #program .block .time {
-  font-family: helvetica;
-  font-size: 28px;
-  line-height: 33px;
+  font-family: 'HelveticaNeueLTPro-Roman';
+  font-size: 34px;
+  line-height: 1.2;
+  font-size: 26px;
 }
-@media (max-width: 599px) {
-  /* line 157, ../scss/style.scss */
+@media (min-width: 900px) {
+  /* line 182, ../scss/style.scss */
   #program .block .time {
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 34px;
   }
 }
-/* line 160, ../scss/style.scss */
+/* line 185, ../scss/style.scss */
 #program .block .title {
   padding-left: 20px;
-  font-family: helvetica;
-  font-size: 28px;
-  line-height: 36px;
+  font-family: 'HelveticaNeueLTPro-It';
   font-style: italic;
   text-transform: uppercase;
+  line-height: 1.2;
+  font-size: 26px;
 }
-@media (max-width: 599px) {
-  /* line 160, ../scss/style.scss */
+@media (min-width: 900px) {
+  /* line 185, ../scss/style.scss */
   #program .block .title {
-    font-size: 24px;
-    line-height: 33px;
+    font-size: 34px;
   }
 }
-/* line 165, ../scss/style.scss */
+/* line 190, ../scss/style.scss */
 #program .block:first-of-type {
   padding-top: 0px;
 }
