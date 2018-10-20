@@ -154,7 +154,6 @@ header #insta span {
 /* line 72, ../scss/style.scss */
 #title, #location, #insta, #radio, #current, #nav, #period {
   font-family: 'HelveticaNeueLTPro-It';
-  font-style: italic;
   text-transform: uppercase;
   line-height: 1.2;
   font-size: 26px;
@@ -344,7 +343,6 @@ header #insta span {
 #program .block .title {
   padding-left: 20px;
   font-family: 'HelveticaNeueLTPro-It';
-  font-style: italic;
   text-transform: uppercase;
   line-height: 1.2;
   font-size: 26px;
