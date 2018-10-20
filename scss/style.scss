@@ -65,18 +65,36 @@ header {
 	}
 }
 
+.chinese-title {
+	// font-family: 'Apple LiGothic Medium.ttf';
+}
+
 #title, #location, #insta, #radio, #current, #nav, #period {
 	@include title-text; 
 }
 
 #radio {
 	background-color: #fff;
+	audio {
+		display: none;
+	}
 	#controls {
 		color: $red;
 		line-height: 1;
+		vertical-align: middle;
+		.controls-inner {
+			padding-top: 10px;
+			display: none;
+		}
+		.show {
+			display: inline-block;
+		}
 	}
 	#current {
-		line-height: 1;
+		div	{
+			padding-top: 10px;
+			display: inline-block;
+		}
 	}
 }
 @include small-screen {
@@ -84,9 +102,11 @@ header {
 		display: flex;
 		flex-flow: row;
 		#controls {
+			padding-top: 10px;
 			flex: 2;
 		}
 		#current{
+			padding-top: 10px;
 			flex: 3;
 			text-align: right;
 		}
