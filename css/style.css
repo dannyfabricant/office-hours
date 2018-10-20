@@ -273,7 +273,7 @@ header #insta span {
 /* line 160, ../scss/style.scss */
 #main-content #content .scroll {
   display: none;
-  width: Calc(100% - 35px);
+  width: Calc(100% - 20px);
   height: auto;
   padding-top: 60px;
   padding-bottom: 40px;
@@ -289,7 +289,7 @@ header #insta span {
 /* line 171, ../scss/style.scss */
 #main-content #content .scroll .scroll-inner {
   margin-left: Calc(50% + 20px);
-  width: calc(50% - 35px);
+  width: calc(50% - 20px);
 }
 @media (max-width: 800px) {
   /* line 171, ../scss/style.scss */
