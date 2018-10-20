@@ -283,27 +283,26 @@ header #insta span {
   /* line 160, ../scss/style.scss */
   #main-content #content .scroll {
     padding-top: 0px;
-    width: 100%;
   }
 }
-/* line 171, ../scss/style.scss */
+/* line 170, ../scss/style.scss */
 #main-content #content .scroll .scroll-inner {
   margin-left: Calc(50% + 20px);
   width: calc(50% - 20px);
 }
 @media (max-width: 800px) {
-  /* line 171, ../scss/style.scss */
+  /* line 170, ../scss/style.scss */
   #main-content #content .scroll .scroll-inner {
     margin-left: 0px;
     width: 100%;
   }
 }
-/* line 180, ../scss/style.scss */
+/* line 179, ../scss/style.scss */
 #main-content #content .scroll.show {
   display: block;
 }
 
-/* line 187, ../scss/style.scss */
+/* line 186, ../scss/style.scss */
 #about p {
   width: 100%;
   margin-bottom: 24px;
@@ -314,13 +313,13 @@ header #insta span {
   font-size: 26px;
 }
 @media (min-width: 900px) {
-  /* line 187, ../scss/style.scss */
+  /* line 186, ../scss/style.scss */
   #about p {
     font-size: 34px;
   }
 }
 
-/* line 196, ../scss/style.scss */
+/* line 195, ../scss/style.scss */
 #program .block {
   position: relative;
   display: block;
@@ -328,7 +327,7 @@ header #insta span {
   padding: 5px 0;
   border-bottom: 2px solid #000;
 }
-/* line 202, ../scss/style.scss */
+/* line 201, ../scss/style.scss */
 #program .block .time {
   font-family: 'HelveticaNeueLTPro-Roman';
   font-size: 34px;
@@ -336,12 +335,12 @@ header #insta span {
   font-size: 26px;
 }
 @media (min-width: 900px) {
-  /* line 202, ../scss/style.scss */
+  /* line 201, ../scss/style.scss */
   #program .block .time {
     font-size: 34px;
   }
 }
-/* line 205, ../scss/style.scss */
+/* line 204, ../scss/style.scss */
 #program .block .title {
   padding-left: 20px;
   font-family: 'HelveticaNeueLTPro-It';
@@ -351,12 +350,12 @@ header #insta span {
   font-size: 26px;
 }
 @media (min-width: 900px) {
-  /* line 205, ../scss/style.scss */
+  /* line 204, ../scss/style.scss */
   #program .block .title {
     font-size: 34px;
   }
 }
-/* line 210, ../scss/style.scss */
+/* line 209, ../scss/style.scss */
 #program .block:first-of-type {
   padding-top: 0px;
 }

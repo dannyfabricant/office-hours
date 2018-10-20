@@ -166,7 +166,6 @@ header {
 			overflow: hidden;
 			@include small-screen {
 				padding-top: 0px;
-				width: 100%;
 			}
 			.scroll-inner {
 				margin-left: Calc(50% + 20px);
