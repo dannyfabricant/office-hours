@@ -283,10 +283,11 @@ header #insta span {
 @media (max-width: 800px) {
   /* line 161, ../scss/style.scss */
   #main-content #content .scroll {
+    width: 100%;
     padding-top: 0px;
   }
 }
-/* line 172, ../scss/style.scss */
+/* line 173, ../scss/style.scss */
 #main-content #content .scroll .scroll-inner {
   box-sizing: border-box;
   margin-left: Calc(50% + 20px);
@@ -294,19 +295,19 @@ header #insta span {
   padding-right: 20px;
 }
 @media (max-width: 800px) {
-  /* line 172, ../scss/style.scss */
+  /* line 173, ../scss/style.scss */
   #main-content #content .scroll .scroll-inner {
     padding-right: 0px;
     margin-left: 0px;
     width: 100%;
   }
 }
-/* line 184, ../scss/style.scss */
+/* line 185, ../scss/style.scss */
 #main-content #content .scroll.show {
   display: block;
 }
 
-/* line 191, ../scss/style.scss */
+/* line 192, ../scss/style.scss */
 #about p {
   width: 100%;
   margin-bottom: 24px;
@@ -317,13 +318,13 @@ header #insta span {
   font-size: 26px;
 }
 @media (min-width: 900px) {
-  /* line 191, ../scss/style.scss */
+  /* line 192, ../scss/style.scss */
   #about p {
     font-size: 34px;
   }
 }
 
-/* line 200, ../scss/style.scss */
+/* line 201, ../scss/style.scss */
 #program .block {
   position: relative;
   display: block;
@@ -331,7 +332,7 @@ header #insta span {
   padding: 5px 0;
   border-bottom: 2px solid #000;
 }
-/* line 206, ../scss/style.scss */
+/* line 207, ../scss/style.scss */
 #program .block .time {
   font-family: 'HelveticaNeueLTPro-Roman';
   font-size: 34px;
@@ -339,12 +340,12 @@ header #insta span {
   font-size: 26px;
 }
 @media (min-width: 900px) {
-  /* line 206, ../scss/style.scss */
+  /* line 207, ../scss/style.scss */
   #program .block .time {
     font-size: 34px;
   }
 }
-/* line 209, ../scss/style.scss */
+/* line 210, ../scss/style.scss */
 #program .block .title {
   padding-left: 20px;
   font-family: 'HelveticaNeueLTPro-It';
@@ -353,12 +354,12 @@ header #insta span {
   font-size: 26px;
 }
 @media (min-width: 900px) {
-  /* line 209, ../scss/style.scss */
+  /* line 210, ../scss/style.scss */
   #program .block .title {
     font-size: 34px;
   }
 }
-/* line 214, ../scss/style.scss */
+/* line 215, ../scss/style.scss */
 #program .block:first-of-type {
   padding-top: 0px;
 }
