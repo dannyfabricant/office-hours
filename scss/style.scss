@@ -174,7 +174,7 @@ header {
 				box-sizing: border-box;
 				margin-left: Calc(50% + 20px);
 				width: calc(50% - 20px);
-				padding-right: 20px;
+				// padding-right: 20px;
 				@include small-screen {
 					padding-right: 0px;
 					margin-left: 0px;
