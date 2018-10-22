@@ -85,6 +85,7 @@ header {
 		.controls-inner {
 			padding-top: 10px;
 			display: none;
+			cursor: pointer;
 		}
 		.show {
 			display: inline-block;
@@ -162,15 +163,19 @@ header {
 			width: Calc(100% - 20px);
 			height: auto;
 			padding-top: space(3);
+			padding-right: 20px;
 			padding-bottom: space(2);
 			overflow: hidden;
 			@include small-screen {
 				padding-top: 0px;
 			}
 			.scroll-inner {
+				box-sizing: border-box;
 				margin-left: Calc(50% + 20px);
 				width: calc(50% - 20px);
+				padding-right: 20px;
 				@include small-screen {
+					padding-right: 0px;
 					margin-left: 0px;
 					width: 100%;
 				}

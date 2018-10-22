@@ -183,42 +183,43 @@ header #insta span {
 #radio #controls .controls-inner {
   padding-top: 10px;
   display: none;
+  cursor: pointer;
 }
-/* line 89, ../scss/style.scss */
+/* line 90, ../scss/style.scss */
 #radio #controls .show {
   display: inline-block;
 }
-/* line 94, ../scss/style.scss */
+/* line 95, ../scss/style.scss */
 #radio #current div {
   padding-top: 10px;
   display: inline-block;
 }
 
 @media (max-width: 800px) {
-  /* line 101, ../scss/style.scss */
+  /* line 102, ../scss/style.scss */
   #radio {
     display: flex;
     flex-flow: row;
   }
-  /* line 104, ../scss/style.scss */
+  /* line 105, ../scss/style.scss */
   #radio #controls {
     padding-top: 10px;
     flex: 2;
   }
-  /* line 108, ../scss/style.scss */
+  /* line 109, ../scss/style.scss */
   #radio #current {
     padding-top: 10px;
     flex: 3;
     text-align: right;
   }
 }
-/* line 116, ../scss/style.scss */
+/* line 117, ../scss/style.scss */
 #main-content {
   position: relative;
   flex: 2;
   padding: 0px;
 }
-/* line 120, ../scss/style.scss */
+/* line 121, ../scss/style.scss */
 #main-content #nav {
   position: absolute;
   top: 60px;
@@ -226,7 +227,7 @@ header #insta span {
   z-index: 2;
 }
 @media (max-width: 800px) {
-  /* line 120, ../scss/style.scss */
+  /* line 121, ../scss/style.scss */
   #main-content #nav {
     position: relative;
     top: 0;
@@ -235,25 +236,25 @@ header #insta span {
     padding-left: 20px;
   }
 }
-/* line 132, ../scss/style.scss */
+/* line 133, ../scss/style.scss */
 #main-content #nav .nav-item-wrap {
   margin-bottom: 5px;
   padding-bottom: 3px;
 }
-/* line 135, ../scss/style.scss */
+/* line 136, ../scss/style.scss */
 #main-content #nav .nav-item-wrap .nav-item {
   display: inline-block;
   cursor: pointer;
 }
-/* line 138, ../scss/style.scss */
+/* line 139, ../scss/style.scss */
 #main-content #nav .nav-item-wrap .nav-item span {
   border-bottom: 2px solid none;
 }
-/* line 143, ../scss/style.scss */
+/* line 144, ../scss/style.scss */
 #main-content #nav .nav-item-wrap .nav-item.selected span {
   border-bottom: 2px solid #000;
 }
-/* line 149, ../scss/style.scss */
+/* line 150, ../scss/style.scss */
 #main-content #content {
   height: 100%;
   width: Calc(100% + 20px);
@@ -261,7 +262,7 @@ header #insta span {
   overflow-y: scroll;
 }
 @media (max-width: 800px) {
-  /* line 149, ../scss/style.scss */
+  /* line 150, ../scss/style.scss */
   #main-content #content {
     height: auto;
     width: Calc(100% + 20px);
@@ -269,39 +270,43 @@ header #insta span {
     padding-top: 10px;
   }
 }
-/* line 160, ../scss/style.scss */
+/* line 161, ../scss/style.scss */
 #main-content #content .scroll {
   display: none;
   width: Calc(100% - 20px);
   height: auto;
   padding-top: 60px;
+  padding-right: 20px;
   padding-bottom: 40px;
   overflow: hidden;
 }
 @media (max-width: 800px) {
-  /* line 160, ../scss/style.scss */
+  /* line 161, ../scss/style.scss */
   #main-content #content .scroll {
     padding-top: 0px;
   }
 }
-/* line 170, ../scss/style.scss */
+/* line 172, ../scss/style.scss */
 #main-content #content .scroll .scroll-inner {
+  box-sizing: border-box;
   margin-left: Calc(50% + 20px);
   width: calc(50% - 20px);
+  padding-right: 20px;
 }
 @media (max-width: 800px) {
-  /* line 170, ../scss/style.scss */
+  /* line 172, ../scss/style.scss */
   #main-content #content .scroll .scroll-inner {
+    padding-right: 0px;
     margin-left: 0px;
     width: 100%;
   }
 }
-/* line 179, ../scss/style.scss */
+/* line 184, ../scss/style.scss */
 #main-content #content .scroll.show {
   display: block;
 }
 
-/* line 186, ../scss/style.scss */
+/* line 191, ../scss/style.scss */
 #about p {
   width: 100%;
   margin-bottom: 24px;
@@ -312,13 +317,13 @@ header #insta span {
   font-size: 26px;
 }
 @media (min-width: 900px) {
-  /* line 186, ../scss/style.scss */
+  /* line 191, ../scss/style.scss */
   #about p {
     font-size: 34px;
   }
 }
 
-/* line 195, ../scss/style.scss */
+/* line 200, ../scss/style.scss */
 #program .block {
   position: relative;
   display: block;
@@ -326,7 +331,7 @@ header #insta span {
   padding: 5px 0;
   border-bottom: 2px solid #000;
 }
-/* line 201, ../scss/style.scss */
+/* line 206, ../scss/style.scss */
 #program .block .time {
   font-family: 'HelveticaNeueLTPro-Roman';
   font-size: 34px;
@@ -334,12 +339,12 @@ header #insta span {
   font-size: 26px;
 }
 @media (min-width: 900px) {
-  /* line 201, ../scss/style.scss */
+  /* line 206, ../scss/style.scss */
   #program .block .time {
     font-size: 34px;
   }
 }
-/* line 204, ../scss/style.scss */
+/* line 209, ../scss/style.scss */
 #program .block .title {
   padding-left: 20px;
   font-family: 'HelveticaNeueLTPro-It';
@@ -348,12 +353,12 @@ header #insta span {
   font-size: 26px;
 }
 @media (min-width: 900px) {
-  /* line 204, ../scss/style.scss */
+  /* line 209, ../scss/style.scss */
   #program .block .title {
     font-size: 34px;
   }
 }
-/* line 209, ../scss/style.scss */
+/* line 214, ../scss/style.scss */
 #program .block:first-of-type {
   padding-top: 0px;
 }
