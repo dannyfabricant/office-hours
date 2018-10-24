@@ -347,6 +347,7 @@ header #insta span {
 /* line 210, ../scss/style.scss */
 #program .block .title {
   padding-left: 20px;
+  white-space: pre-wrap;
   font-family: 'HelveticaNeueLTPro-It';
   text-transform: uppercase;
   line-height: 1.2;
@@ -358,7 +359,7 @@ header #insta span {
     font-size: 34px;
   }
 }
-/* line 215, ../scss/style.scss */
+/* line 216, ../scss/style.scss */
 #program .block:first-of-type {
   padding-top: 0px;
 }
