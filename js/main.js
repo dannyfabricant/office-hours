@@ -58,7 +58,7 @@ function schedule() {
 		let text = event.children('.title').text()
 		let eventArray = [date, start, end, text]
 		schedule.push(eventArray)
-		console.log(eventArray)
+		// console.log(eventArray)
 	})
 
 	let todaysEvent = null
@@ -73,7 +73,7 @@ function schedule() {
 		let currentTime = date.getHours()
 		let currentDay = date.getDate()
 	 
-		console.log(currentTime);
+		// console.log(currentTime);
 
 		if ( currentDay == eventDay && currentTime >= eventStart && currentTime < eventEnd ) {
 			todaysEvent = schedule[i]
