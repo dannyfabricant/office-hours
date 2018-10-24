@@ -43,11 +43,11 @@ function schedule() {
 
 	let schedule = [
 		//////// test schedule //////////
-		['10/24/18', 10, 11, 'Danny'],
-		['10/24/18', 11, 13, 'Angela'],
-		['10/24/18', 13, 14, 'Jean Radio Hour'],
-		['10/24/18', 14, 17, 'Karen'],
-		['10/24/18', 17, 18, 'MNDPC Radio Hour']
+		// ['10/24/18', 10, 11, 'Danny'],
+		// ['10/24/18', 11, 13, 'Angela'],
+		// ['10/24/18', 13, 14, 'Jean Radio Hour'],
+		// ['10/24/18', 14, 17, 'Karen'],
+		// ['10/24/18', 17, 18, 'MNDPC Radio Hour']
 	]
 
 	$('.block').each( function() {
