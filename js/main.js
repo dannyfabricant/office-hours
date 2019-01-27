@@ -1,3 +1,5 @@
+let visibleBio = false;
+
 $(document).ready( function() {
 	$('.nav-item').click( function() {
 		let content = $(this).attr('content')
@@ -10,15 +12,29 @@ $(document).ready( function() {
 
 	$('#play').click(function() { play(radio) })
 	$('#pause').click(function() { pause(radio) })
+	
+	$('.podcast').click( function() {
+		let mp3 = $(this).attr('mp3')
+		let bio = $(this).attr('bio')
+		let title = $(this).children('.title').text()
+		loadRadio(radio, mp3)
+		loadBio(bio,  title)
+	})
 
-	schedule()
-	setInterval( schedule, 60000)
+	// previous code for setting/checking the schedule
+	// schedule()
+	// setInterval( schedule, 60000)
 })
 
 function showContent(content, navItem) {
-	console.log(content)
 	$('#content').children().removeClass('show');
 	$('.nav-item').removeClass('selected')
+
+	if ( content == '#program' && visibleBio == true) {
+		$('#bio').addClass('show')
+	} else {
+		$('#bio').removeClass('show');
+	}
 
 	$(content).addClass('show')
 	$(navItem).addClass('selected')
@@ -37,6 +53,38 @@ function pause(radio) {
 	$('#pause').removeClass('show')
 	$('#play').addClass('show')
 }
+
+function loadRadio(radio, mp3) {
+	radio.src = '../audio/' + mp3
+	radio.load()
+
+	setTimeout( function() {
+		play(radio)
+	}, 300)
+}
+
+function loadBio(bio, title) {
+	let file = '../bios/' + bio
+	$('#bio').load(file, function(text, status) {
+		$('#broadcast-title').text(title)
+		if( status == 'success') {
+			$('#nav .scroll').scrollTop(0)
+			$('#bio').addClass('show');
+			visibleBio = true;
+		} else {
+			$('#bio').removeClass('show')
+			visibleBio = false;
+		}
+	})
+}
+
+
+
+
+
+
+
+
 
 function schedule() {
 	console.log('updating radio text')

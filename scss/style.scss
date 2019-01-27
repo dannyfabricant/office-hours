@@ -119,30 +119,61 @@ header {
 	flex: 2;
 	padding: 0px;
 	#nav {
-		position: absolute;
-		top: 60px;
-		left: 20px;
 		z-index: 2;
+		position: absolute;
+		box-sizing: border-box;
+		top: 0px;
+		left: 0px;
+		width: Calc(50% - 20px);
+		height: 100%;
+		overflow: hidden;
 		@include small-screen {
+			width: Calc(100% - 30px);
 			position: relative;
 			top: 0;
 			left: 0;
 			padding-top: 20px;
 			padding-left: 20px;
 		}
-		.nav-item-wrap {
-			margin-bottom: 5px;
-			padding-bottom: 3px;
-			.nav-item {
-				display: inline-block;
-				cursor: pointer;
-				span {
-					border-bottom: 2px solid none;
-				}
+		.scroll {
+			width: Calc(100% + 20px);
+			height: 100%;
+			overflow: scroll;
+			@include small-screen {
+				overflow: hidden;
 			}
-			.nav-item.selected {
-				span {
-					border-bottom: 2px solid #000;
+			.scroll-inner {
+				padding-top: space(3);
+				padding-left: 20px;
+				padding-bottom: space(2);
+				.nav-item-wrap {
+					margin-bottom: 5px;
+					padding-bottom: 3px;
+					.nav-item {
+						display: inline-block;
+						cursor: pointer;
+						span {
+							border-bottom: 2px solid none;
+						}
+					}
+					.nav-item.selected {
+						span {
+							border-bottom: 2px solid #000;
+						}
+					}
+				}
+				#bio {
+					overflow: hidden;
+					display: none;
+					padding-top: 60px;
+					padding-bottom: 60px;
+					white-space: pre-wrap;
+					@include small-screen {
+						width: 100%;
+					}
+				}
+				#bio.show {
+					display: block;
 				}
 			}
 		}
@@ -208,6 +239,7 @@ header {
 			@include body-text;
 		}
 		.title {
+			padding-top: space(.5);
 			padding-left: space(1);
 			white-space: pre-wrap;
 			@include title-text;
