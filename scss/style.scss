@@ -248,6 +248,10 @@ header {
 	.block:first-of-type {
 		padding-top: 0px;
 	}
+	.block:hover .title, .title.active {
+			opacity: 0.6;
+			cursor: pointer;
+	}
 }
 
 

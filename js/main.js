@@ -14,6 +14,8 @@ $(document).ready( function() {
 	$('#pause').click(function() { pause(radio) })
 	
 	$('.podcast').click( function() {
+		$('.title').removeClass('active')
+		$(this).children('.title').addClass('active')
 		let mp3 = $(this).attr('mp3')
 		let bio = $(this).attr('bio')
 		let title = $(this).children('.title').text()

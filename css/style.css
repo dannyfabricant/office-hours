@@ -405,3 +405,8 @@ header #insta span {
 #program .block:first-of-type {
   padding-top: 0px;
 }
+/* line 251, ../scss/style.scss */
+#program .block:hover .title, #program .title.active {
+  opacity: 0.6;
+  cursor: pointer;
+}
