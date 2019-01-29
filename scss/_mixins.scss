@@ -1,0 +1,50 @@
+///// MOBILE STYLE MIXINS //////
+
+
+@mixin small-screen {
+  @media (max-width: 800px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+@function space($multiplier) {
+	@return $base-spacing-unit * $multiplier;
+}
+
+@mixin title-text{
+	font-family: 'HelveticaNeueLTPro-It';
+	text-transform: uppercase;
+	line-height: 1.2;
+	font-size: 26px;
+	@include for-tablet-landscape-up {
+		font-size: 34px;
+	}
+}
+
+@mixin body-text {
+	font-family: 'HelveticaNeueLTPro-Roman';
+	font-size: 34px;
+	line-height: 1.2;
+	font-size: 26px;
+	@include for-tablet-landscape-up {
+		font-size: 34px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

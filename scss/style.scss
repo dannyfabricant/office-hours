@@ -1,0 +1,288 @@
+$red: rgb(231,0,0);
+$base-spacing-unit: 20px;
+
+@import '_reset.scss';
+@import '_fonts.scss';
+@import '_mixins.scss';
+
+html {
+	background-color: rgb(231,253,0);
+	@include body-text;
+}
+body {
+	display: flex;
+	flex-flow: column;
+	height: 100vh;
+	@include small-screen {
+		height: auto;
+	}
+}
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+.full {
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	overflow: hidden;
+	padding: space(1);
+	white-space: nowrap;
+	@include small-screen {
+		padding: 10px;
+		white-space: normal;
+	}
+}
+.half {
+	width: 50%;
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	vertical-align: top;
+	overflow: hidden;
+	@include small-screen {
+		// display: block;	
+		width: 100%;
+		min-width: 0px;
+		padding: 10px;
+	}
+}
+
+
+// STYLES //
+
+header {
+	margin-bottom: space(2);
+	@include small-screen {
+		margin-bottom: 10px;
+	}
+	#insta {
+		span {
+			float: left;
+		}
+	}
+}
+
+.chinese-title {
+	// font-family: 'Apple LiGothic Medium.ttf';
+}
+
+#title, #location, #insta, #radio, #current, #nav, #period {
+	@include title-text; 
+}
+
+#radio {
+	background-color: #fff;
+	audio {
+		display: none;
+	}
+	#controls {
+		color: $red;
+		line-height: 1;
+		vertical-align: middle;
+		.controls-inner {
+			padding-top: 10px;
+			display: none;
+			cursor: pointer;
+		}
+		.show {
+			display: inline-block;
+		}
+		.time-button {
+			display: inline-block;
+			vertical-align: middle;
+			height: 37px;
+			width: 37px;
+			margin-top: -6px;
+			margin-left: 30px;
+			cursor: pointer;
+			@include small-screen {
+				height: 26px;
+				width: 26px;
+				margin-left: 15px;
+			}
+		}
+		#ff {
+			background-image: url('../ff.svg');
+		}
+		#rw {
+			background-image: url('../rw.svg');
+		}
+	}
+	#current {
+		div	{
+			padding-top: 10px;
+			display: inline-block;
+		}
+	}
+}
+// @include small-screen {
+// 	#radio {
+// 		display: flex;
+// 		flex-flow: row;
+// 		#controls {
+// 			padding-top: 10px;
+// 			flex: 2;
+// 		}
+// 		#current{
+// 			padding-top: 10px;
+// 			flex: 3;
+// 			text-align: right;
+// 		}
+// 	}
+// }
+
+#main-content {
+	position: relative;
+	flex: 2;
+	padding: 0px;
+	#nav {
+		z-index: 2;
+		position: absolute;
+		box-sizing: border-box;
+		top: 0px;
+		left: 0px;
+		width: Calc(50% - 20px);
+		height: 100%;
+		overflow: hidden;
+		@include small-screen {
+			width: Calc(100% - 30px);
+			position: relative;
+			top: 0;
+			left: 0;
+			padding-top: 20px;
+			padding-left: 20px;
+		}
+		.scroll {
+			width: Calc(100% + 20px);
+			height: 100%;
+			overflow: scroll;
+			@include small-screen {
+				overflow: hidden;
+			}
+			.scroll-inner {
+				padding-top: space(3);
+				padding-left: 20px;
+				padding-bottom: space(2);
+				.nav-item-wrap {
+					margin-bottom: 5px;
+					padding-bottom: 3px;
+					.nav-item {
+						display: inline-block;
+						cursor: pointer;
+						span {
+							border-bottom: 2px solid none;
+						}
+					}
+					.nav-item.selected {
+						span {
+							border-bottom: 2px solid #000;
+						}
+					}
+				}
+				#bio {
+					overflow: hidden;
+					display: none;
+					padding-top: 60px;
+					padding-bottom: 60px;
+					white-space: pre-wrap;
+					@include small-screen {
+						width: 100%;
+					}
+				}
+				#bio.show {
+					display: block;
+				}
+			}
+		}
+	}
+	#content {
+		height: 100%;
+		width: Calc(100% + 20px);
+		padding: 0px;
+		overflow-y: scroll; 
+		@include small-screen {
+			height: auto;
+			width: Calc(100% + 20px);
+			padding: space(1);
+			padding-top: 10px;
+		}
+		.scroll {
+			display: none;
+			width: Calc(100% - 20px);
+			height: auto;
+			padding-top: space(3);
+			padding-right: 20px;
+			padding-bottom: space(2);
+			overflow: hidden;
+			@include small-screen {
+				width: 100%;
+				padding-top: 0px;
+			}
+			.scroll-inner {
+				box-sizing: border-box;
+				margin-left: Calc(50% + 20px);
+				width: calc(50% - 20px);
+				// padding-right: 20px;
+				@include small-screen {
+					padding-right: 0px;
+					margin-left: 0px;
+					width: 100%;
+				}
+			}
+		}
+		.scroll.show {
+			display: block;
+		}
+	}
+}
+
+#about {
+	p {
+		width: 100%;
+		margin-bottom: 24px;
+		white-space: normal;
+		@include body-text;
+	}
+}
+
+#program {
+	.block {
+		position: relative;
+		display: block;
+		width: 100%;
+		// padding: 5px 0;
+		.time {
+			@include body-text;
+		}
+		.title {
+			// padding-top: space(.5);
+			padding-left: space(1);
+			white-space: pre-wrap;
+			@include title-text;
+		}
+	}
+	.block:first-of-type {
+		padding-top: 0px;
+	}
+	.block:hover .title, .title.active {
+			text-decoration: underline;
+			cursor: pointer;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
