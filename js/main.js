@@ -30,6 +30,22 @@ $(document).ready( function() {
 		loadBio(bio,  title)
 	})
 
+	// load first podcast
+	let podcast = $('.podcast').eq(0)
+	let mp3 = $(podcast).attr('mp3')
+	let bio = $(podcast).attr('bio')
+	let title = $(podcast).children('.title').text()
+	let file = '../bios/' + bio
+	$('#bio').load(file, function(text, status) {
+		$('#broadcast-title').text(title)
+		if( status == 'success') {
+			$('#nav .scroll').scrollTop(0)
+			visibleBio = true;
+		}
+	})
+	radio.src = '../audio/' + mp3
+	radio.load()
+
 	// previous code for setting/checking the schedule
 	// schedule()
 	// setInterval( schedule, 60000)

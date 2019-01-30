@@ -377,8 +377,10 @@ header #insta span {
   position: relative;
   display: block;
   width: 100%;
+  padding: 5px 0;
+  border-bottom: 2px solid #000;
 }
-/* line 257, ../scss/style.scss */
+/* line 258, ../scss/style.scss */
 #program .block .time {
   font-family: 'HelveticaNeueLTPro-Roman';
   font-size: 34px;
@@ -386,13 +388,14 @@ header #insta span {
   font-size: 26px;
 }
 @media (min-width: 900px) {
-  /* line 257, ../scss/style.scss */
+  /* line 258, ../scss/style.scss */
   #program .block .time {
     font-size: 34px;
   }
 }
-/* line 260, ../scss/style.scss */
+/* line 261, ../scss/style.scss */
 #program .block .title {
+  padding-top: 10px;
   padding-left: 20px;
   white-space: pre-wrap;
   font-family: 'HelveticaNeueLTPro-It';
@@ -401,17 +404,17 @@ header #insta span {
   font-size: 26px;
 }
 @media (min-width: 900px) {
-  /* line 260, ../scss/style.scss */
+  /* line 261, ../scss/style.scss */
   #program .block .title {
     font-size: 34px;
   }
 }
-/* line 267, ../scss/style.scss */
+/* line 268, ../scss/style.scss */
 #program .block:first-of-type {
   padding-top: 0px;
 }
-/* line 270, ../scss/style.scss */
+/* line 271, ../scss/style.scss */
 #program .block:hover .title, #program .title.active {
-  text-decoration: underline;
+  opacity: 0.6;
   cursor: pointer;
 }
