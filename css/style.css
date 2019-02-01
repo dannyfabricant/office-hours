@@ -403,6 +403,7 @@ header #insta span {
 }
 /* line 262, ../scss/style.scss */
 #program .block .title {
+  margin-bottom: 5px;
   white-space: pre-wrap;
   font-family: 'HelveticaNeueLTPro-It';
   text-transform: uppercase;
@@ -415,11 +416,11 @@ header #insta span {
     font-size: 34px;
   }
 }
-/* line 269, ../scss/style.scss */
+/* line 270, ../scss/style.scss */
 #program .block:first-of-type {
   padding-top: 0px;
 }
-/* line 272, ../scss/style.scss */
+/* line 273, ../scss/style.scss */
 #program .block:hover .title, #program .title.active {
   text-decoration: underline;
   cursor: pointer;

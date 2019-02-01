@@ -262,6 +262,7 @@ header {
 		.title {
 			// padding-top: space(.5);
 			// padding-left: space(1);
+			margin-bottom: 5px;
 			white-space: pre-wrap;
 			@include title-text;
 		}
