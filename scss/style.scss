@@ -239,13 +239,11 @@ header {
 	}
 }
 
-#about {
-	p {
+#about .scroll-inner p {
 		width: 100%;
 		margin-bottom: 24px;
 		white-space: normal;
-		@include body-text;
-	}
+		@include title-text;
 }
 
 #program {
@@ -253,14 +251,12 @@ header {
 		position: relative;
 		display: block;
 		width: 100%;
-		padding: 5px 0;
-		border-bottom: 2px solid #000;
 		.time {
 			@include body-text;
 		}
 		.title {
-			padding-top: space(.5);
-			padding-left: space(1);
+			// padding-top: space(.5);
+			// padding-left: space(1);
 			white-space: pre-wrap;
 			@include title-text;
 		}
@@ -269,7 +265,7 @@ header {
 		padding-top: 0px;
 	}
 	.block:hover .title, .title.active {
-			opacity: 0.6;
+			text-decoration: underline;
 			cursor: pointer;
 	}
 }
