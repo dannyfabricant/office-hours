@@ -187,9 +187,12 @@ header {
 					display: none;
 					padding-top: 60px;
 					padding-bottom: 60px;
-					white-space: pre-wrap;
+					white-space: normal;
 					@include small-screen {
 						width: 100%;
+					}
+					p {
+						padding-bottom: 40px;
 					}
 				}
 				#bio.show {
