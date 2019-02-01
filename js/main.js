@@ -93,7 +93,7 @@ function loadBio(bio, title) {
 	$('#bio').load(file, function(text, status) {
 		$('#broadcast-title').text(title)
 		if( status == 'success') {
-			$('#nav .scroll').scrollTop(0)
+			// $('#nav .scroll').scrollTop(0)
 			$('#bio').addClass('show');
 			visibleBio = true;
 		} else {
