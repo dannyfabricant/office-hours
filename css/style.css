@@ -262,7 +262,7 @@ header #insta span {
 #main-content #nav .scroll {
   width: Calc(100% + 20px);
   height: 100%;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 @media (max-width: 800px) {
   /* line 162, ../scss/style.scss */
