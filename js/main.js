@@ -102,7 +102,7 @@ function loadRadio(radio, mp3) {
 }
 
 function loadBio(bio, title) {
-	let file = '/office-hours/bios/' + bio
+	let file = '../bios/' + bio
 	$('#bio').load(file, function(text, status) {
 		$('#broadcast-title').text(title)
 		if( status == 'success') {
