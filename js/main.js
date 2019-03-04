@@ -1,5 +1,5 @@
 let visibleBio = false;
-let firstload = false
+let firstload = true
 
 $(document).ready( function() {
 	$('.nav-item').click( function() {
@@ -11,8 +11,9 @@ $(document).ready( function() {
 
 	let radio = $('audio')[0]
 
-	$('#play').click(function() { 
-		if (firstload == false) {
+	$('#play').click(function(e) { 
+		// console.log('play click', firstload, e)
+		if (firstload == true) {
 			// load first podcast
 			let podcast = $('.podcast').eq(0)
 			$(podcast).children('.title').addClass('active')
@@ -30,7 +31,7 @@ $(document).ready( function() {
 			radio.src = '../audio/' + mp3
 			radio.load()
 			play(radio)
-			firstload = true
+			firstload = false
 		} else {
 			play(radio)
 		}
@@ -46,7 +47,8 @@ $(document).ready( function() {
 		$('audio')[0].currentTime -= 5
 	})
 	
-	$('.podcast').click( function() {
+	$('.podcast').click( function(e) {
+		// console.log('podcast clicked', e)
 		$('.title').removeClass('active')
 		$(this).children('.title').addClass('active')
 		let mp3 = $(this).attr('mp3')
@@ -90,6 +92,7 @@ function pause(radio) {
 }
 
 function loadRadio(radio, mp3) {
+	// console.log('radio loading')
 	radio.src = '../audio/' + mp3
 	radio.load()
 
@@ -99,7 +102,7 @@ function loadRadio(radio, mp3) {
 }
 
 function loadBio(bio, title) {
-	let file = '../bios/' + bio
+	let file = '/office-hours/bios/' + bio
 	$('#bio').load(file, function(text, status) {
 		$('#broadcast-title').text(title)
 		if( status == 'success') {
