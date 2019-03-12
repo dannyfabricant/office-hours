@@ -12,7 +12,7 @@ $(document).ready( function() {
 	let radio = $('audio')[0]
 
 	$('#play').click(function(e) { 
-		// console.log('play click', firstload, e)
+		console.log('play click', firstload)
 		if (firstload == true) {
 			// load first podcast
 			let podcast = $('.podcast').eq(0)
@@ -33,6 +33,7 @@ $(document).ready( function() {
 			play(radio)
 			firstload = false
 		} else {
+			firstload = false
 			play(radio)
 		}
 		
@@ -92,7 +93,9 @@ function pause(radio) {
 }
 
 function loadRadio(radio, mp3) {
-	// console.log('radio loading')
+	firstload = false;
+	console.log('radio loading')
+	console.log('firstload', firstload)
 	radio.src = '../audio/' + mp3
 	radio.load()
 
