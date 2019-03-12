@@ -181,13 +181,10 @@ header {
 					.nav-item {
 						display: inline-block;
 						cursor: pointer;
-						span {
-							border-bottom: 2px solid none;
-						}
 					}
 					.nav-item.selected {
 						span {
-							border-bottom: 2px solid #000;
+							text-decoration: underline;
 						}
 					}
 				}
@@ -256,6 +253,9 @@ header {
 		margin-bottom: 24px;
 		white-space: normal;
 		@include title-text;
+		a {
+			text-decoration: underline;
+		}
 }
 
 #program {
