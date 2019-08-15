@@ -1,4 +1,6 @@
 $red: rgb(231,0,0);
+$yellow: rgb(231,253,0);
+$green: #00c171;
 $base-spacing-unit: 20px;
 
 @import '_reset.scss';
@@ -6,7 +8,7 @@ $base-spacing-unit: 20px;
 @import '_mixins.scss';
 
 html {
-	background-color: rgb(231,253,0);
+	background-color: $green;
 	@include body-text;
 }
 body {
@@ -267,7 +269,7 @@ header {
 		.time {
 			@include body-text;
 		}
-		.title {
+		.title, .main-title {
 			// padding-top: space(.5);
 			// padding-left: space(1);
 			margin-bottom: 5px;
